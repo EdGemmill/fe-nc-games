@@ -2,16 +2,18 @@ import Navbar from "./Navbar"
 
 const Heading = () => {
 return (
-    <p>
+    // <div>
         <div className='heading-background'>
+            <br/>
+            <br/>
             <h1>
                 Northcoders Games
             </h1>
-        </div>
+        {/* </div> */}
         <Navbar/>
-    </p>
+    </div>
 )
 
 }
 
-export default Heading
+export default Heading;

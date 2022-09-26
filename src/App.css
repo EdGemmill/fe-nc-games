@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+h1 {
+margin-left: 100px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -31,8 +35,8 @@
 .heading-background{
   background-image: url('https://www.manchesterdigital.com/storage/6766/Northcoders-Primary-Logo---Red.png');
   background-repeat: no-repeat;
-  background-size: 300px;
-  height: auto
+  background-size: 400px;
+  height: 100%
 }
 
 @keyframes App-logo-spin {
