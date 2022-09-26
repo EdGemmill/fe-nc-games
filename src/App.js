@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
@@ -18,6 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="*" element={<div>404 : not found</div>} />
+      </Routes>
     </div>
   );
 }
