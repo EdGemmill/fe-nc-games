@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import CategorySelector from "./CategorySelector";
 import ReviewCard from "./ReviewCard";
 
-const ReviewsList = () => {
+const ReviewsPage = () => {
 
   const [isLoadingReview, setIsLoadingReview] = useState(true);
   const [reviewsList, setReviewsList] = useState([])
@@ -15,9 +16,11 @@ const ReviewsList = () => {
   return (
     <div>
       <h2>Reviews</h2>
+      <CategorySelector setReviewsList={setReviewsList}/>
       <ul>
-        
         {reviewsList.map((review)=> {
+          console.log(reviewsList)
+         console.log(Array.isArray(reviewsList))
           return <ReviewCard review={review}/>
         })}
       </ul>
@@ -25,4 +28,4 @@ const ReviewsList = () => {
   );
 };
 
-export default ReviewsList;
+export default ReviewsPage;

@@ -2,7 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Heading from "./components/Heading";
-import ReviewsList from "./components/ReviewsList.jsx";
+import ReviewsPage from "./components/ReviewsPage.jsx";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/reviews" element={<ReviewsList />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="*" element={<div>404 : not found</div>} />
       </Routes>
+      <Footer />
     </div>
   );
 }
