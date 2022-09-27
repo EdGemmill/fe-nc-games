@@ -1,6 +1,6 @@
 const ReviewCard = ({review}) => {
     return (
-        <li className="review-card">
+        <li className="review-card" key={review.review_id}>
            <img src={review.review_img_url} className="review-thumbnail" alt={`${review.title} thumbnail`}></img>
             <div className="review-title">
                 <h3>{review.title}</h3>
