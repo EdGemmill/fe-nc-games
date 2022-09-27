@@ -17,6 +17,10 @@ margin-left: 100px;
   }
 }
 
+a {
+  padding: 4px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -46,4 +50,17 @@ margin-left: 100px;
   to {
     transform: rotate(360deg);
   }
+}
+
+.review-thumbnail {
+  display: inline-block;
+  max-height: 75px;
+  float:left
+}
+
+.review-title {
+  display:inline-block;
+  margin-left: 1rem;
+  text-align: left;
+  
 }

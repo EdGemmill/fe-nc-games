@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Heading from "./components/Heading";
+import ReviewsList from "./components/ReviewsList.jsx";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/reviews" element={<ReviewsList />} />
         <Route path="*" element={<div>404 : not found</div>} />
       </Routes>
     </div>
