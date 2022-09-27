@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+h1 {
+margin-left: 100px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -11,6 +15,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+a {
+  padding: 4px;
 }
 
 .App-header {
@@ -28,6 +36,13 @@
   color: #61dafb;
 }
 
+.heading-background{
+  background-image: url('https://www.manchesterdigital.com/storage/6766/Northcoders-Primary-Logo---Red.png');
+  background-repeat: no-repeat;
+  background-size: 400px;
+  height: 100%
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +50,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.review-thumbnail {
+  display: inline-block;
+  max-height: 75px;
+  float:left
+}
+
+.review-title {
+  display:inline-block;
+  text-align:justify;
+  float:inline-start
+
 }
