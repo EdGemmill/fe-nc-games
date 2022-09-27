@@ -9,7 +9,7 @@ const ReviewsList = () => {
   useEffect(() => {
     fetch("https://fe-games-api-ed.herokuapp.com/api/reviews")
     .then((res) => res.json()).then(({reviews}) => {setReviewsList(reviews); setIsLoadingReview(false)})
-  })
+  },[])
   
   if(isLoadingReview) return <p>Loading...</p>
   return (
