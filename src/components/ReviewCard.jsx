@@ -8,8 +8,7 @@ const ReviewCard = ({review}) => {
             </div>
             <p>{review.review_body}</p>
             <p>{review.votes} votes <br/>
-            {review.comment_count} comments</p>
-            
+            {review.comment_count} comments</p> 
         </li>
     )
 }
