@@ -17,7 +17,7 @@ const CategorySelector = () => {
 
 return (
   <div>
-    <ul name="review-category-dropdown" id="review-category-dropdown" >
+    <ul name="review-category-list" id="review-category-list" >
           <li key="all"><Link to="/reviews">All</Link></li>
       {categoryList.map((category) => {
         return (<li key={category}>

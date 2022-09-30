@@ -8,21 +8,32 @@ const ReviewsPage = () => {
   const [isLoadingReview, setIsLoadingReview] = useState(true);
   const [reviewsList, setReviewsList] = useState([])
 
-
-  const {categoryname} = useParams()
+  const {urlEnd} = useParams()
 
   useEffect(() => {
-    let categoryStr = "";
-    if (categoryname) {
-      categoryStr = `?category=${categoryname}`;
-    }
-    
-    fetch(`https://fe-games-api-ed.herokuapp.com/api/reviews${categoryStr}`)
+    if (urlEnd) {
+      if (Number(urlEnd)) {
+        fetch(`https://fe-games-api-ed.herokuapp.com/api/reviews/${urlEnd}`)
+        .then((res) => res.json())
+        .then(({ review }) => {setReviewsList([review]);
+        setIsLoadingReview(false)})
+
+      } else {
+      fetch(`https://fe-games-api-ed.herokuapp.com/api/reviews?category=${urlEnd}`)
       .then((res) => res.json())
       .then(({ reviews }) => {setReviewsList(reviews);
-      setIsLoadingReview(false)});
-  }, [categoryname, setReviewsList]);
-  
+      setIsLoadingReview(false)})
+      }
+
+    } else {
+    fetch(`https://fe-games-api-ed.herokuapp.com/api/reviews`)
+    .then((res) => res.json())
+    .then(({ reviews }) => {setReviewsList(reviews);
+    setIsLoadingReview(false)})
+    }
+  }, [urlEnd, setReviewsList]);
+
+
   if(isLoadingReview) return <p>Loading...</p>
   return (
     <div>
@@ -30,7 +41,7 @@ const ReviewsPage = () => {
       <CategorySelector />
       <ul>
         {reviewsList.map((review)=> {
-          return <ReviewCard review={review}/>
+          return <ReviewCard review={review} />
         })}
       </ul>
     </div>
