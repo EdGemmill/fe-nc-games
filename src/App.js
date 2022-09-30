@@ -4,7 +4,6 @@ import Homepage from "./components/Homepage";
 import Heading from "./components/Heading";
 import ReviewsPage from "./components/ReviewsPage.jsx";
 import Footer from "./components/Footer";
-import SingleReview from "./components/SingleReview";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/reviews/:urlEnd" element={<ReviewsPage />} />
-        {/* <Route path="/reviews/:urlEnd" element={<SingleReview />} /> */}
         <Route path="*" element={<div>404 : not found</div>} />
       </Routes>
 
